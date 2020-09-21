@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.outer {
+			width: 300px;
+			height: 300px;
+			background-color: green;
+		}
+		.inner {
+			width: 200px;
+			height: 200px;
+			background-color: purple;
+		}
+		.innerest {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="inner">
+			<div class="innerest"></div>
+		</div>
+	</div>
+</body>
+
+<script>
+	// document.querySelector('.outer').onclick = function () {
+	// 	console.log('outer');
+	// }
+	// document.querySelector('.inner').onclick = function () {
+	// 	console.log('inner');
+	// }
+	// document.querySelector('.innerest').onclick = function () {
+	// 	console.log('innerest');
+	// }
+
+	document.querySelector('.outer').addEventListener('click', function (event) {
+		console.log(this);
+		console.log(event.target);
+		console.log(event.currentTarget);
+		console.log('outer');
+	}, true);
+	document.querySelector('.inner').addEventListener('click', function () {
+		console.log('inner');
+	}, true);
+	document.querySelector('.innerest').addEventListener('click', function () {
+		console.log('innerest');
+	})
+</script>
+</html>
